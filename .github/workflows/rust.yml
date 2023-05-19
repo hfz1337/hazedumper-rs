@@ -13,6 +13,8 @@ jobs:
     - uses: raftario/setup-rust-action@v1
       with:
         cache: false
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     - name: Build project
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
